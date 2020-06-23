@@ -42,12 +42,12 @@ const MarkdownParagraph = styled.p`
 `;
 
 const MarkdownList = styled.ul`
-  margin: 0;
+  margin: 0em;
 `;
 
 const MarkdownListItem = styled.li`
   margin: 1em 0;
-  line-height: 2em;
+  line-height: 1em;
 `;
 
 const MarkdownLink = ({ href, children }) => {

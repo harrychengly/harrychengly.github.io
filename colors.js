@@ -1,14 +1,14 @@
 module.exports = {
   background: '#FFFFFF',
-  backgroundDark: '#f0e6f6',
+  backgroundDark: '#ddf3f5', //third color
 
   text: '#333333',
 
-  primary: '#7c37ad',
-  primaryLight: '#ae66df',
-  primaryDark: '#4b007d',
+  primary: '#111d5e',
+  primaryLight: '#ffbd69',
+  primaryDark: '#111d5e',
 
-  secondary: '#ff4081',
-  secondaryLight: '#ff79b0',
-  secondaryDark: '#c60055',
+  secondary: '#ffbd69',
+  secondaryLight: '#ddf3f5', //hover 
+  secondaryDark: '#111d5e', // text
 };

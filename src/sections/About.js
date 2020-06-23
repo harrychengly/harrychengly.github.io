@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Image, Flex } from 'rebass/styled-components';
+import { Heading, Box, Image, Flex } from 'rebass/styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
@@ -59,24 +59,53 @@ const About = () => (
                 src
               }
             }
+            aboutMeEdu {
+              childMarkdownRemark {
+                rawMarkdownBody
+              }
+            }
           }
         }
       `}
       render={(data) => {
-        const { aboutMe, profile } = data.contentfulAbout;
+        const { aboutMe, profile, aboutMeEdu } = data.contentfulAbout;
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-            <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
+            <Box width={[1, 1, 4/6]} px={[1, 2, 4]} marginBottom = "4em">
               <Fade bottom>
+              <Heading
+              marginTop= "0.5em"
+              textAlign="Left"
+              as="h1"
+              color="primary"
+              fontSize={[6, 7]}
+              mb={[3, 4, 3]}
+            >
+              {`Work Experience`}
+            </Heading>
                 <ReactMarkdown
                   source={aboutMe.childMarkdownRemark.rawMarkdownBody}
+                  renderers={markdownRenderer}
+                />
+              <Heading
+              marginTop= "0.5em"
+              textAlign="Left"
+              as="h1"
+              color="primary"
+              fontSize={[6, 7]}
+              mb={[3, 4, 3]}
+            >
+              {`Education`}
+            </Heading>
+            <ReactMarkdown
+                  source={aboutMeEdu.childMarkdownRemark.rawMarkdownBody}
                   renderers={markdownRenderer}
                 />
               </Fade>
             </Box>
 
             <Box
-              width={[1, 1, 2 / 6]}
+              width={[1, 1, 2/ 6]}
               style={{ maxWidth: '300px', margin: 'auto' }}
             >
               <Fade right>

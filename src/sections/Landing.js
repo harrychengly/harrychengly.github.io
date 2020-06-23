@@ -76,7 +76,7 @@ const LandingPage = () => (
               fontSize={[6, 7]}
               mb={[3, 4, 5]}
             >
-              {`Hello, I'm ${name}!`}
+              {`${name}`}
             </Heading>
 
             <Heading
@@ -91,7 +91,7 @@ const LandingPage = () => (
                 {roles
                   .sort(() => deterministicBehaviour || Math.random() - 0.5)
                   .map((text) => (
-                    <Text width={[300, 500]} key={text}>
+                    <Text width={[1000, 1000]} key={text}>
                       {text}
                     </Text>
                   ))}
